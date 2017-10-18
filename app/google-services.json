@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "92791897946",
+    "firebase_url": "https://triptrap-958d9.firebaseio.com",
+    "project_id": "triptrap-958d9",
+    "storage_bucket": "triptrap-958d9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:92791897946:android:e36d6e05a700373e",
+        "android_client_info": {
+          "package_name": "hackathon.app.triptap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "92791897946-omr3aso7hr6ibeso9s7a7o6dbtcc9v68.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCqxrxMUb5g2ORGv4p9IcfZqhh4EG-JJcU"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="hackathon.app.triptap.MainActivity">
+    tools:context="hackathon.app.triptap.core.main.MainActivity">
 
     <TextView
         android:layout_width="wrap_content"
