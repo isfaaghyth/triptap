@@ -1,11 +1,17 @@
 <resources>
 
     <!-- Base application theme. -->
-    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
-        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorPrimary">@color/triptap2</item>
+        <item name="colorPrimaryDark">@color/triptap</item>
+        <item name="colorAccent">@color/triptap3</item>
+    </style>
+
+    <style name="ratingbar">
+                <item name="android:progressDrawable">@drawable/ratingstar</item>
+                <item name="android:minHeight">22dip</item>
+                <item name="android:maxHeight">22dip</item>
     </style>
 
 </resources>
