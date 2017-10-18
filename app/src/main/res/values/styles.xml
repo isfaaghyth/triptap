@@ -9,9 +9,9 @@
     </style>
 
     <style name="ratingbar">
-                <item name="android:progressDrawable">@drawable/ratingstar</item>
-                <item name="android:minHeight">22dip</item>
-                <item name="android:maxHeight">22dip</item>
+        <item name="android:progressDrawable">@drawable/ratingstar</item>
+        <item name="android:minHeight">22dip</item>
+        <item name="android:maxHeight">22dip</item>
     </style>
 
     <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.Light.NoActionBar">

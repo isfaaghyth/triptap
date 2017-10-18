@@ -4,4 +4,9 @@
     <string name="need_help">Do you need help?</string>
     <string name="read_more">Read More</string>
     <string name="loading">Please Wait</string>
+    <string name="close">CLOSE</string>
+    <string name="cannot_register">Opps! something error. Please check your Internet connection</string>
+    <string name="successfully">Successfully! Welcome to TripTap</string>
+    <string name="yes">YES</string>
+    <string name="cannot_login">Opps! something wrong. Please check your email and password.</string>
 </resources>

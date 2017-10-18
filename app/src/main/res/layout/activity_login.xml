@@ -35,40 +35,56 @@
             android:textColorHint="@android:color/white">
 
             <EditText
-                android:id="@+id/edt_username"
+                android:id="@+id/edt_email"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Username"
-                android:textSize="13sp"
-                android:inputType="textPersonName"
+                android:hint="Email"
+                android:textSize="15sp"
+                android:inputType="textEmailAddress"
                 android:maxLines="1"
                 android:textColor="@android:color/white"
                 android:theme="@style/TriptapEdittextLine"/>
 
         </android.support.design.widget.TextInputLayout>
 
-        <android.support.design.widget.TextInputLayout
-            android:layout_width="match_parent"
+        <RelativeLayout
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="50dp"
-            android:layout_marginEnd="50dp"
-            android:layout_marginTop="5dp"
-            android:layout_marginBottom="10dp"
-            android:textColor="@android:color/white"
-            android:textColorHint="@android:color/white">
+            android:layout_marginEnd="50dp">
 
-            <EditText
-                android:id="@+id/edt_password"
+            <android.support.design.widget.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Password"
-                android:maxLines="1"
-                android:inputType="textPassword"
-                android:textSize="13sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="10dp"
+                android:layout_marginEnd="40dp"
                 android:textColor="@android:color/white"
-                android:theme="@style/TriptapEdittextLine"/>
+                android:textColorHint="@android:color/white">
 
-        </android.support.design.widget.TextInputLayout>
+                <hackathon.app.triptap.utils.EditTextPassword
+                    android:id="@+id/edt_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:hint="Password"
+                    android:maxLines="1"
+                    android:inputType="textPassword"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"
+                    android:theme="@style/TriptapEdittextLine"/>
+
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageView
+                android:id="@+id/img_password_icon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_centerVertical="true"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="5dp"
+                android:src="@mipmap/ic_password_show"/>
+
+        </RelativeLayout>
 
         <Button
             android:id="@+id/btn_login"
@@ -108,7 +124,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:text="@string/read_more"
-                android:textColor="@color/colorAccent"
+                android:textColor="@color/triptap3"
                 android:textStyle="bold"/>
 
         </LinearLayout>

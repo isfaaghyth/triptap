@@ -33,6 +33,7 @@ public class IntroActivity extends BaseActivity<IntroPresenter> implements Intro
         super.onCreate(savedInstanceState);
         binding(R.layout.activity_intro);
         presenter.setupViewPager(layoutDots, viewpagerIntro);
+        presenter.isLogin(this);
     }
 
     @OnClick(R.id.btn_login)

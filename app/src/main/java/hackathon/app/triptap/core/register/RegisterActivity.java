@@ -13,12 +13,16 @@ import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 import butterknife.BindView;
 import butterknife.OnClick;
 import hackathon.app.triptap.R;
 import hackathon.app.triptap.base.BaseActivity;
+import hackathon.app.triptap.core.main.MainActivity;
+import hackathon.app.triptap.interfaces.AlertConfirmListener;
 import hackathon.app.triptap.utils.EditTextPassword;
+import hackathon.app.triptap.utils.StartNewActivities;
 
 /**
  * Created by isfaaghyth on 10/18/17.
@@ -47,6 +51,7 @@ public class RegisterActivity extends BaseActivity<RegisterPresenter> implements
         binding(R.layout.activity_register);
         setToolbar(toolbar, true);
         mAuth = FirebaseAuth.getInstance();
+        edtPassword.passwordToggle(imgPasswordIcon);
     }
 
     @Override protected void onStart() {
@@ -55,15 +60,27 @@ public class RegisterActivity extends BaseActivity<RegisterPresenter> implements
 
     @OnClick(R.id.btn_register)
     public void onBtnRegisterClicked() {
+        String name = edtFullName.getText().toString();
         String email = edtEmail.getText().toString();
         String password = edtPassword.getText().toString();
         mAuth.createUserWithEmailAndPassword(email, password)
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
+                        UserProfileChangeRequest profile = new UserProfileChangeRequest
+                                                                .Builder()
+                                                                .setDisplayName(name)
+                                                                .build();
+                        user.updateProfile(profile);
+                        showPopup(getString(R.string.successfully), new AlertConfirmListener() {
+                            @Override public void yes() {
+                                StartNewActivities.start(RegisterActivity.this, MainActivity.class);
+                            }
+                            @Override public void no() {}
+                        });
                         presenter.userisLogin(user);
                     } else {
-
+                        showPopup(getString(R.string.cannot_register));
                     }
                 });
     }
