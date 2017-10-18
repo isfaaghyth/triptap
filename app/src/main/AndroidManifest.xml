@@ -27,8 +27,14 @@
         <activity
             android:name=".core.login.LoginActivity"/>
 
+
         <activity
-            android:name=".core.main.MainActivity"/>
+            android:name=".core.places.PlacesActivity"
+            android:theme="@style/AppTheme"/>
+
+        <activity
+            android:name=".core.main.MainActivity"
+            android:theme="@style/AppTheme"/>
 
     </application>
 

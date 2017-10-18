@@ -64,12 +64,7 @@ public class LoginActivity extends BaseActivity<LoginPresenter> implements Login
                 .addOnCompleteListener(this, task -> {
                     if (task.isSuccessful()) {
                         FirebaseUser user = mAuth.getCurrentUser();
-                        showPopup(getString(R.string.successfully), new AlertConfirmListener() {
-                            @Override public void yes() {
-                                StartNewActivities.start(LoginActivity.this, MainActivity.class);
-                            }
-                            @Override public void no() {}
-                        });
+                        StartNewActivities.start(LoginActivity.this, MainActivity.class);
                         presenter.userisLogin(user);
                     } else {
                         showPopup(getString(R.string.cannot_login));
