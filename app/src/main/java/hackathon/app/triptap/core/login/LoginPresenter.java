@@ -1,6 +1,9 @@
 package hackathon.app.triptap.core.login;
 
+import android.content.Context;
+
 import hackathon.app.triptap.base.BasePresenter;
+import hackathon.app.triptap.core.intro.IntroView;
 
 /**
  * Created by isfaaghyth on 10/18/17.

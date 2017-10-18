@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.view.MenuItem;
 
 import butterknife.ButterKnife;
 
@@ -30,6 +31,16 @@ public abstract class BaseActivity<P extends BasePresenter> extends AppCompatAct
     protected void setToolbar(Toolbar toolbar, boolean isHomeButton) {
         setSupportActionBar(toolbar);
         if (isHomeButton) getSupportActionBar().setDisplayHomeAsUpEnabled(true);
+    }
+
+    @Override public boolean onOptionsItemSelected(MenuItem item) {
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                onBackPressed();
+                finish();
+                break;
+        }
+        return super.onOptionsItemSelected(item);
     }
 
     @Override protected void onDestroy() {
