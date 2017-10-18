@@ -26,4 +26,10 @@
         <item>@color/grey_200</item>
         <item>@color/grey_200</item>
     </array>
+
+    <color name="triptap">#0098d2</color>
+    <color name="triptap2">#297fb8</color>
+    <color name="triptap3">#cf076e</color>
+    <color name="triptab4">#eeeeee</color>
+
 </resources>
