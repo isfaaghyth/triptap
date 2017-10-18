@@ -3,4 +3,5 @@
     <string name="signin_button">SIGN IN</string>
     <string name="need_help">Do you need help?</string>
     <string name="read_more">Read More</string>
+    <string name="loading">Please Wait</string>
 </resources>
